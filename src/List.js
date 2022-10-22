@@ -13,7 +13,7 @@ function List({ list, setList }) {
         let revisedArray = list.filter(task => { return task.id !== id })
         setList(revisedArray);
     }
-
+    
     return (
         <div className="task-container">
             {

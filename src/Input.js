@@ -4,7 +4,7 @@ import List from './List'
 function Input() {
 
     const [input, setInput] = useState('')
-    const [list, setList] = useState(JSON.parse(localStorage.getItem('autosave-data')))
+    const [list, setList] = useState(JSON.parse(localStorage.getItem('autosave-data')) || [])
 
     useEffect(() => {
         localStorage.setItem('autosave-data', JSON.stringify(list))
