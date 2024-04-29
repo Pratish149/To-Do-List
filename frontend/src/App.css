@@ -13,8 +13,7 @@
   border: 2px solid black;
   border-radius: 10px;
   background-color: rgb(16, 20, 75);
-  box-shadow: 8px -8px 8px grey,
-    -8px 8px 8px grey;
+  box-shadow: 8px -8px 8px grey, -8px 8px 8px grey;
 }
 
 .App-header {
@@ -82,4 +81,16 @@ input {
 
 button:hover {
   cursor: pointer;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
