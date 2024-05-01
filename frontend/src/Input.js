@@ -8,7 +8,7 @@ function Input({ setLoading }) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/list")
+      .get("https://to-do-list-beige-five-78.vercel.app/list")
       .then((response) => {
         const { data } = response || {};
         setList(data);
@@ -40,7 +40,7 @@ function Input({ setLoading }) {
       completed: false,
     };
     const response = await axios.post(
-      "http://localhost:3000/list/add",
+      "https://to-do-list-beige-five-78.vercel.app/list/add",
       newTaskObj
     );
     const { data } = response || {};
