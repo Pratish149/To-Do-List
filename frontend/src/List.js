@@ -6,7 +6,7 @@ function List({ list, setList, setLoading }) {
     setLoading(true);
     const { _id, completed } = list[index] || {};
     axios
-      .put(`http://localhost:3000/list/update/${_id}`, {
+      .put(`https://to-do-list-beige-five-78.vercel.app/list/update/${_id}`, {
         completed: !completed,
       })
       .then((response) => {
@@ -35,7 +35,7 @@ function List({ list, setList, setLoading }) {
   function handleDelete(id) {
     setLoading(true);
     axios
-      .delete(`http://localhost:3000/list/delete/${id}`)
+      .delete(`https://to-do-list-beige-five-78.vercel.app/list/delete/${id}`)
       .then((response) => {
         const { data } = response || {};
         const { status } = data || {};
