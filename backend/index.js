@@ -14,14 +14,7 @@ app.use(express.json());
 app.get("/list", async (req, resp) => {
   // Add CORS headers
     resp.setHeader('Access-Control-Allow-Origin', 'https://to-do-list-ps.vercel.app'); // Your frontend origin
-    resp.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // Allowed HTTP methods
-    resp.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Allowed headers
-
-    // Handle preflight OPTIONS requests
-    if (req.method === 'OPTIONS') {
-        resp.status(200).end(); // Respond to preflight with a 200 OK
-        return;
-    }
+    
   const list = await List.find();
   resp.send(list);
 });
