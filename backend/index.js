@@ -3,8 +3,14 @@ const List = require("./models/listModel");
 const express = require("express");
 var cors = require("cors");
 
+const corsOptions = {
+  origin: "https://to-do-list-ps.vercel.app",
+  methods: ["GET","POST","PUT","DELETE"],
+  allowedHeaders: ["Content-Type","Authorization"]
+}
+
 const app = express();
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.get("/list", async (req, resp) => {
