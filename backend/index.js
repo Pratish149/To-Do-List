@@ -4,7 +4,7 @@ const express = require("express");
 var cors = require("cors");
 
 const corsOptions = {
-  origin: "https://to-do-list-ps.vercel.app",
+  origin: "https://to-do-list-beige-five-78.vercel.app",
   methods: ["GET","POST","PUT","DELETE"],
   allowedHeaders: ["Content-Type","Authorization"]
 }
